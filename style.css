@@ -15,7 +15,7 @@
   /*  (key background) */
   --dark-blue: hsl(225, 21%, 49%);
   /* (key shadow) */
-  --dark-blue: hsl(224, 28%, 35%);
+  --dark-blue-1: hsl(224, 28%, 35%);
 
   /* (key background, toggle) */
   --red: hsl(6, 63%, 50%);
@@ -166,6 +166,28 @@ form {
   text-align: center;
   padding: 1rem;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  bottom: -2px;
+  left: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.num-keys::before,
+.operators::before,
+.dot::before {
+  background-color: var(--grayish-orange);
 }
 
 .reset,
@@ -173,10 +195,20 @@ form {
   background-color: var(--dark-blue);
 }
 
+.del::before,
+.reset::before {
+  background-color: var(--dark-blue-1);
+}
+
+.equals::before {
+  background-color: var(--dark-red);
+}
+
 .reset,
 .del,
 .equals {
   color: var(--white);
+  font-size: 1.4rem;
 }
 
 .reset {
