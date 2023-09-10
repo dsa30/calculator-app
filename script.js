@@ -1,11 +1,6 @@
 let numbers = document.querySelectorAll(".num-keys");
+const screen = document.querySelector(".screen");
 
-Array.from(numbers).map((number) => {
-  number.addEventListener("click", (event) => {
-    console.log(event.target.textContent);
-  });
-});
-console.log(numbers);
 const calculator = {
   firstNumber: null,
   secondNumber: null,
@@ -29,3 +24,12 @@ const calculator = {
     }
   },
 };
+
+Array.from(numbers).map((number) => {
+  number.addEventListener("click", (event) => {
+    if (screen.textContent === "0") {
+      screen.textContent = "";
+    }
+    screen.textContent += event.target.textContent;
+  });
+});
