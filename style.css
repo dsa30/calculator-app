@@ -100,21 +100,50 @@ body {
   padding: 1rem;
 }
 
-.calc {
+.calc-title {
+  font-size: 2rem;
+}
+
+.calc,
+.theme-select {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+}
+
+.theme-select {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.select-title,
+label {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.calc,
+.screen {
+  margin-bottom: 1.5rem;
+  text-align: right;
+}
+
+form,
+.screen {
+  background-color: var(--dark-desaturated-blued-k2);
+}
+
+form {
+  border-radius: 100px;
+  width: 75px;
+  text-align: center;
 }
 
 .screen {
-  background-color: var(--dark-desaturated-blued-k2);
   color: var(--white);
   border-radius: 10px;
   padding: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.select-title {
-  font-size: 16px;
-  color: var(--white);
 }
 
 .numbers {
